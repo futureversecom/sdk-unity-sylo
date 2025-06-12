@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Bump, Build, Release
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate token
+        id: generate-token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.FV_GH_BOT_APP_ID }}
+          private_key: ${{ secrets.FV_GH_BOT_PRIVATE_KEY }}
+
+      - name: Bump version and generate changelog
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v5
+        with:
+          # Change this to the location of your package.json - done
+          version-file: "./package.json"
+          input-file: "./CHANGELOG.md"
+          github-token: ${{ steps.generate-token.outputs.token }}
+          git-user-name: FVCodePublisher
+          git-user-email: codepublish@futureverse.com
+
+        # Also change the paths in this step to match your project structure - done
+      - name: Find Package Files
+        run: |
+          echo "./Runtime.meta" >> "metalist"
+          find "./Runtime/" -name \*.meta >> "metaList"
+
+        # Change package path to your package name - done
+      - name: Create Unity Package
+        uses: pCYSl5EDgo/create-unitypackage@master
+        with:
+          package-path: "SyloSDK.unitypackage"
+          include-files: metaList
+
+        # Also change the path here - done
+      - name: Create GitHub Release
+        if: steps.changelog.outputs.skipped != 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.changelog.outputs.version }}
+          name: v${{ steps.changelog.outputs.version }}
+          body: ${{ steps.changelog.outputs.changelog }}
+          files: SyloSDK.unitypackage
