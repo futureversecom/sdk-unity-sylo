@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/futureversecom/sdk-unity-sylo/compare/v0.2.0...v0.3.0) (2025-06-17)
+
+
+### Features
+
+* clean and refactor into static architecture. Add FuturePass implementation sample ([4e22a53](https://github.com/futureversecom/sdk-unity-sylo/commit/4e22a53a05dc8f9a2ddbcd5263d3d6268d2fb553))
+
+
+
 # 0.2.0 (2025-06-12)
 
 
