@@ -1,0 +1,17 @@
+{
+    "name": "Futureverse.Sylo.FuturePass",
+    "rootNamespace": "Futureverse.Sylo",
+    "references": [
+        "Futureverse.Sylo",
+        "Futureverse.FuturePass"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,4 +1,7 @@
-﻿public interface ISyloAuthDetails
+﻿namespace Futureverse.Sylo
 {
-    public string GetAccessToken();
+    public interface ISyloAuthDetails
+    {
+        public string GetAccessToken();
+    }
 }
