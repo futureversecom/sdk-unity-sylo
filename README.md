@@ -1,8 +1,47 @@
-# sdk-unity-sylo
+# Unity Sylo SDk
 
-This Unity SDK supplies utilities for interacting with the Sylo data service. 
+A Unity Engine plugin that provides a simple API for accessing data associated with a Sylo Decentralized Identifier (DID).
 
-## API Reference
+---
+
+## 🔍 What is Sylo?
+
+**Sylo** is a protocol for accessing off-chain decentralized data associated with a **DID (Decentralized ID)**. A Sylo DID looks like:
+
+```
+did:sylo-data:0xfFFFffFF0000000000000000000000000000052f/ed38c341-a26a-4426-aed9-4f8f362b70bf
+```
+
+This structure breaks down as follows:
+
+- `did:` → Declares this is a decentralized identifier.
+- `sylo-data:` → Specifies the method used, in this case `sylo-data`.
+- `0xfFFFffFF0000000000000000000000000000052f` → The owner address of the data.
+- `ed38c341-a26a-4426-aed9-4f8f362b70bf` → A unique ID for the data being accessed.
+
+---
+
+## ✨ Features
+
+- 🔐 **Futurepass Token-based Authentication**
+- 💾 **Load Sylo DID data**
+  
+---
+
+## 🧩 Installation - Package Manager via Git
+
+1. In the Unity Package Manger, click '+' -> "Add package from git URL".
+2. Paste the git url for this project and press "add"
+
+## 🧩 Installation - Import .unitypackage
+
+1. In the [Releases](https://github.com/futureversecom/sdk-unity-sylo/releases) area of this repository, download the .unitypackage for your target version
+2. Right-click in the Project window in the Unity engine, and select "Import Package -> Custom Package"
+3. Navigate to your downloaded .unityproject file
+4. Press "Import" on the next window
+---
+
+## 📄 API Reference
 
 ### SyloUtilities
 The primary source of functions and data when interacting with the Sylo SDK
@@ -70,7 +109,7 @@ Interface definition for providing authentication details to the data provision 
 
 </details>
 
-## Getting Started: Using the Debug Function
+## 🛠️ Getting Started: Using the Debug Function
 
 <p>Locate and add the Sylo prefab to your game scene</p>
 <p>This prefab has inputs for a data id, sylo resolver and access token.</p>
