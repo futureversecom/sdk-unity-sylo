@@ -74,6 +74,9 @@ Interface definition for providing authentication details to the data provision 
 
 <p>Locate and add the Sylo prefab to your game scene</p>
 <p>This prefab has inputs for a data id, sylo resolver and access token.</p>
+<img src="docs/sc-prefab.png" width=45%>
+
+<br>
 <p>For the purposes of debugging you may use the following:</p>
 
 | Var | Data |
@@ -81,9 +84,12 @@ Interface definition for providing authentication details to the data provision 
 | DID | did:sylo-data:0xfFFFffFF0000000000000000000000000000052f/ed38c341-a26a-4426-aed9-4f8f362b70bf |
 | Resolver URI | https://sylo-resolver.data.storage-sylo.futureverse.cloud |
 
+<br>
 <p>This Sylo resolver is on the staging environment, and as thus needs to be authenticated with a staging FuturePass access token</p>
 
 To get a valid access token, I recommend utilising the [FuturePass Unity SDK](https://github.com/futureversecom/sdk-unity-futurepass)
 
 <p>Once a valid access token has been added to the DebugSyloExecutor component, press the "Run Debug" button.</p>
+
+<img src="docs/sc-console.png">
 <p>After a moment, you should see a result packet written to the Console window. The speed of this will depend on your internet connection.</p>
