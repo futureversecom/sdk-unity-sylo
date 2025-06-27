@@ -143,10 +143,15 @@ using Futureverse.Sylo;
 const string resolverUri = "https://sylo-resolver.data.storage-sylo.futureverse.cloud"
 const string dataId = "did:sylo-data:0xfFFFffFF0000000000000000000000000000052f/ed38c341-a26a-4426-aed9-4f8f362b70bf";
 
+string GetAccessToken() {
+  // return a valid Futurepass access token.
+  // Consider utilising the Futureverse Futurepass Unity SDK found at https://github.com/futureversecom/sdk-unity-futurepass
+  return "";
+}
 void Run() {
   SyloUtilities.SetResolverUri(debug_resolverUri);
   CoroutineSceneObject.Instance.StartCoroutine(
-      SyloUtilities.GetBytesFromDID(debug_did, new DebugAuthDetails(debug_accessToken), bytes => Debug.Log($"Received {bytes.Length} bytes"), Debug.LogException)
+      SyloUtilities.GetBytesFromDID(dataId, new DebugAuthDetails(GetAccessToken()), bytes => Debug.Log($"Received {bytes.Length} bytes"), Debug.LogException)
   );
 }
 ```
