@@ -132,3 +132,21 @@ To get a valid access token, I recommend utilising the [FuturePass Unity SDK](ht
 
 <img src="docs/sc-console.png">
 <p>After a moment, you should see a result packet written to the Console window. The speed of this will depend on your internet connection.</p>
+
+<br>
+
+## 🛠️ Getting Started: Download Test Asset
+
+```cs
+using Futureverse.Sylo;
+
+const string resolverUri = "https://sylo-resolver.data.storage-sylo.futureverse.cloud"
+const string dataId = "did:sylo-data:0xfFFFffFF0000000000000000000000000000052f/ed38c341-a26a-4426-aed9-4f8f362b70bf";
+
+void Run() {
+  SyloUtilities.SetResolverUri(debug_resolverUri);
+  CoroutineSceneObject.Instance.StartCoroutine(
+      SyloUtilities.GetBytesFromDID(debug_did, new DebugAuthDetails(debug_accessToken), bytes => Debug.Log($"Received {bytes.Length} bytes"), Debug.LogException)
+  );
+}
+```
