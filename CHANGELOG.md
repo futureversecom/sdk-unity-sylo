@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/futureversecom/sdk-unity-sylo/compare/v0.3.0...v0.3.1) (2025-07-04)
+
+
+### Bug Fixes
+
+* add meta files for docs and package files ([8fc79c5](https://github.com/futureversecom/sdk-unity-sylo/commit/8fc79c546e7c04aed2f7fa1af459b0e10ebef8a7))
+
+
+
 # [0.3.0](https://github.com/futureversecom/sdk-unity-sylo/compare/v0.2.0...v0.3.0) (2025-06-17)
 
 
