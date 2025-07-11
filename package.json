@@ -1,7 +1,7 @@
 {
   "name": "com.futureverse.sdk-unity-sylo",
   "version": "0.3.1",
-  "displayName": "Unity Sylo SDK",
+  "displayName": "Sylo",
   "unity": "2021.3",
   "author": {
     "name": "Futureverse"
