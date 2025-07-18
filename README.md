@@ -1,6 +1,10 @@
-# Unity Sylo SDk
+# Unity Sylo SDK
 
-A Unity Engine plugin that provides a simple API for accessing data associated with a Sylo Decentralized Identifier (DID).
+**A Sylo data access plugin for Unity, by [Futureverse](https://www.futureverse.com)**
+
+The **Sylo SDK** is a Unity Engine plugin for accessing off-chain decentralized data using **Sylo DIDs (Decentralized Identifiers)**. It provides a simple interface for loading Sylo data, setting resolver URIs, and authenticating via FuturePass tokens.
+
+> For more on Sylo and the broader Futureverse developer ecosystem, visit the [Futureverse Documentation Hub](https://docs.futureverse.com).
 
 ---
 
@@ -30,14 +34,14 @@ This structure breaks down as follows:
 
 ## 🧩 Installation - Package Manager via Git
 
-1. In the Unity Package Manger, click '+' -> "Add package from git URL".
+1. In the Unity Package Manager, click '+' -> "Add package from git URL".
 2. Paste the git url for this project and press "add"
 
 ## 🧩 Installation - Import .unitypackage
 
 1. In the [Releases](https://github.com/futureversecom/sdk-unity-sylo/releases) area of this repository, download the .unitypackage for your target version
 2. Right-click in the Project window in the Unity engine, and select "Import Package -> Custom Package"
-3. Navigate to your downloaded .unityproject file
+3. Navigate to your downloaded .unitypackage file
 4. Press "Import" on the next window
 ---
 
@@ -140,7 +144,7 @@ To get a valid access token, I recommend utilising the [FuturePass Unity SDK](ht
 ```cs
 using Futureverse.Sylo;
 
-const string resolverUri = "https://sylo-resolver.data.storage-sylo.futureverse.cloud"
+const string resolverUri = "https://sylo-resolver.data.storage-sylo.futureverse.cloud";
 const string dataId = "did:sylo-data:0xfFFFffFF0000000000000000000000000000052f/ed38c341-a26a-4426-aed9-4f8f362b70bf";
 
 string GetAccessToken() {
@@ -155,3 +159,9 @@ void Run() {
   );
 }
 ```
+
+---
+
+## 📄 License
+
+This SDK is released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
